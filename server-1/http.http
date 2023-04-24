@@ -1,6 +1,12 @@
 ### server-1 호출
-GET http://localhost:5000/server-1/user/jhl
+GET http://localhost:5000/server-1/user/jhl2
 
 
 ### server-2 호출
 GET http://localhost:9000/server-2/user/jhl/point
+
+
+
+
+### actuator
+GET http://localhost:5000/actuator/health

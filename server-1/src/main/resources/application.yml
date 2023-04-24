@@ -1,0 +1,18 @@
+server:
+  port: 5000
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s # 10? ???? ???? 50%? ??? ??????? Open?? Open 10? ?? ?? Half-Open ??? ??
+    instances:
+      points:
+        base-config: default
+
+management:
+  health:
+    circuitbreakers:
+      enabled: true

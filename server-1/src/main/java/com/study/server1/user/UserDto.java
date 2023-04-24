@@ -1,8 +1,7 @@
 package com.study.server1.user;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Getter
 public class UserDto {
@@ -11,11 +10,13 @@ public class UserDto {
     private final String name;
     private final Point point;
 
+    @ToString
     @Getter
     public static class Point {
         private Long remainPoint;
 
-        public Point() {}
+        public Point() {
+        }
 
         private Point(Long remainPoint) {
             this.remainPoint = remainPoint;
