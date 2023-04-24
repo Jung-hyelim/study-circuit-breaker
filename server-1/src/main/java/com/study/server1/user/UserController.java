@@ -14,7 +14,7 @@ public class UserController {
 
     @GetMapping("/server-1/user/{id}")
     public UserDto userInfo(@PathVariable String id) {
-        log.info("사용자 정보 조회 user id = {}", id);
+//        log.info("사용자 정보 조회 user id = {}", id);
         UserDto user = userService.getUserInfo(id);
         return user;
     }

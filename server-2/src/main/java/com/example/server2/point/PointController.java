@@ -12,6 +12,9 @@ public class PointController {
     @GetMapping("/server-2/user/{id}/point")
     public PointDto userPoint(@PathVariable String id) {
         log.info("user id : {} 의 포인트 조회", id);
+        if ("jhl".equals(id)) {
+            throw new RuntimeException("강제 에러!! ");
+        }
         return PointDto.of(1000L);
     }
 }
