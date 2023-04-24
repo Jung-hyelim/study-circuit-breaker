@@ -28,9 +28,6 @@ public class UserService {
         RestTemplate restTemplate = new RestTemplate();
         URI uri = UriComponentsBuilder.fromHttpUrl("http://localhost:9000/server-2/user/" + id + "/point").build().toUri();
         return restTemplate.getForObject(uri, UserDto.Point.class);
-//        System.out.println("response = " + response);
-//        return null;
-//        return UserDto.Point.of(point);
     }
 
     private RestTemplate getRestTemplate() {
