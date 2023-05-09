@@ -5,9 +5,9 @@ resilience4j:
   circuitbreaker:
     configs:
       default:
-        slidingWindowSize: 10
-        failureRateThreshold: 50
-        waitDurationInOpenState: 10s # 10? ???? ???? 50%? ??? ??????? Open?? Open 10? ?? ?? Half-Open ??? ??
+        slidingWindowSize: 10         # 10번 요청에서
+        failureRateThreshold: 50      # 실패율이 50%가 넘으면 서킷브레이커 open 하고,
+        waitDurationInOpenState: 10s  # 10초후에 다시 half-open 상태로 전환
     instances:
       points:
         base-config: default
